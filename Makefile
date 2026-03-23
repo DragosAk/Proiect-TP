@@ -2,10 +2,10 @@ CC = gcc
 CFLAGS = -Wall
 LDFLAGS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
-all: farm_game
+all: farming_simulator
 
-farm_game: main.c farm.c
-	$(CC) $(CFLAGS) main.c farm.c -o farm_game $(LDFLAGS)
+farming_simulator: main.c farm.c
+	$(CC) $(CFLAGS) main.c farm.c -o farming_simulator $(LDFLAGS)
 
 clean:
-	rm -f farm_game save.dat
+	rm -f farming_simulator save.dat
