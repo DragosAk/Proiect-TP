@@ -1,5 +1,6 @@
 #include "farm.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void init_game(GameState *gs) {
     gs->posX = (SIZE / 2) * TILE_SIZE;
@@ -21,11 +22,15 @@ void init_game(GameState *gs) {
 
 void save_game(GameState *gs) {
     FILE *f = fopen("save.dat", "wb");
+    if (f == NULL) {
+        printf("Eroare deschidere fisier!\n");
+        exit(1);
+    }
     if (f) { fwrite(gs, sizeof(GameState), 1, f); fclose(f); }
 }
 
 void load_game(GameState *gs) {
     FILE *f = fopen("save.dat", "rb");
-    if (f) { fread(gs, sizeof(GameState), 1, f); fclose(f); }
+    if (f != NULL) { fread(gs, sizeof(GameState), 1, f); fclose(f); }
     else init_game(gs);
 }

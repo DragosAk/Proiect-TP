@@ -2,8 +2,6 @@
 #include "farm.h"
 #include <stdlib.h>
 #include <time.h>
-#include <stdint.h>
-#include <stdio.h>
 
 int main() {
     srand(time(NULL));
@@ -111,11 +109,11 @@ int main() {
                             Color plantCol;
                             float scale = 0.0f;
 
-                            // calcul progres pentru animatie lina de marime
+                            // calcul progres animatie
                             float p = (curTime - gs.field[y][x].plantTime) / GROWTH_TIME;
                             if (p > 1.0f) p = 1.0f;
 
-                            // marimea creste de la 20% la 90% din tile
+                            // scalare marime plant in tile
                             scale = 0.2f + (p * 0.7f);
 
                             switch(gs.field[y][x].state) {
@@ -125,7 +123,7 @@ int main() {
                                 case STATE_MATURE:   plantCol = GOLD;      scale = 0.95f; break;
                             }
 
-                            // desenare planta centrata in tile
+                            // desenare planta centrata
                             float offset = (TILE_SIZE * (1.0f - scale)) / 2;
                             DrawRectangle(x * TILE_SIZE + offset, y * TILE_SIZE + offset, TILE_SIZE * scale, TILE_SIZE * scale, plantCol);
                         }
