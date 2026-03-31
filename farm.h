@@ -13,6 +13,10 @@
 #define STATE_GROWING 2
 #define STATE_ALMOST 3
 #define STATE_MATURE 4
+#define MAX_CROP_TYPES 3
+#define CROP_WHEAT 0
+#define CROP_CARROT 1
+#define CROP_PUMPKIN 2
 
 typedef struct {
     int state;
@@ -22,8 +26,12 @@ typedef struct {
 typedef struct {
     Tile field[SIZE][SIZE];
     float posX, posY;
-    int money, seeds, inventory, seconds, minutes, hours;
+    int money;
+    int selected_seed;
+    int seeds;
+    int inventory;
     float totalPlayTime;
+    int seconds, minutes, hours;
 } GameState;
 
 void init_game(GameState *gs);
