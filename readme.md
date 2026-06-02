@@ -13,13 +13,11 @@ Cerinte:
 
 * GCC
 * Raylib
-* Python 3.x
 * Make
 
 Setup:
 
 * git clone https://github.com/DragosAk/Farming-Simulator
-* python generators/nume_script.py
 * make clean
 * make
 * ./farming_simulator
