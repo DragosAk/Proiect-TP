@@ -7,7 +7,7 @@ Structura:
 * farm.c: Logica principala a jocului, gestionand miscarea, inventarul, magazinul și randarea hartii.
 * farm.h: Fisier de antet (header) continand definitiile pentru structuri, constante si starile jocului.
 * Makefile: Script de compilare (build) pentru a asambla fișierele C.
-* menu.mp3: Fișierul audio comprimat pentru coloana sonoră a meniului principal.
+* menu.mp3: Fisierul audio pentru muzica din meniu
 
 Cerinte:
 
