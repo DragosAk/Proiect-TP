@@ -6,7 +6,7 @@ Structura:
 * main.c: Scriptul principal pentru a initializa fereastra Raylib si a rula jocul.
 * farm.c: Logica principala a jocului, gestionand miscarea, inventarul, magazinul și randarea hartii.
 * farm.h: Fisier de antet (header) continand definitiile pentru structuri, constante si starile jocului.
-* Makefile: Script de compilare (build) pentru a asambla fișierele C.
+* Makefile: Script de compilare (build) pentru a asambla fisierele C.
 * menu.mp3: Fisierul audio pentru muzica din meniu
 
 Cerinte:
