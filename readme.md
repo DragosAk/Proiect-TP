@@ -18,6 +18,5 @@ Cerinte:
 Setup:
 
 * git clone https://github.com/DragosAk/Farming-Simulator
-* make clean
 * make
 * ./farming_simulator
